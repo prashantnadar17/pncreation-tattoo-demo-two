@@ -1,3 +1,10 @@
+import fineLine from "../assets/work-fineline.jpg";
+import blackwork from "../assets/work-blackwork.jpg";
+import realism from "../assets/work-realism.jpg";
+import minimal from "../assets/work-minimal.jpg";
+import piercing from "../assets/work-piercing.jpg";
+import geometric from "../assets/work-geometric.jpg";
+
 export const services = [
   {
     n: "01",
@@ -129,13 +136,6 @@ export const process = [
 ] as const;
 
 export type WorkCategory = "Fine Line" | "Blackwork" | "Realism" | "Minimal" | "Piercing" | "Geometric";
-
-import fineLine from "../assets/work-fineline.jpg";
-import blackwork from "../assets/work-blackwork.jpg";
-import realism from "../assets/work-realism.jpg";
-import minimal from "../assets/work-minimal.jpg";
-import piercing from "../assets/work-piercing.jpg";
-import geometric from "../assets/work-geometric.jpg";
 
 export const works: {
   label: string;
