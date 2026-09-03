@@ -1,3 +1,10 @@
+import fineLine from "../assets/work-fineline.jpg";
+import blackwork from "../assets/work-blackwork.jpg";
+import realism from "../assets/work-realism.jpg";
+import minimal from "../assets/work-minimal.jpg";
+import piercing from "../assets/work-piercing.jpg";
+import geometric from "../assets/work-geometric.jpg";
+
 export const services = [
   {
     n: "01",
@@ -128,25 +135,87 @@ export const process = [
   },
 ] as const;
 
-export type WorkCategory = "Fine Line" | "Blackwork" | "Realism" | "Minimal" | "Piercing";
+export type WorkCategory = "Fine Line" | "Blackwork" | "Realism" | "Minimal" | "Piercing" | "Geometric";
 
 export const works: {
   label: string;
   category: WorkCategory;
-  art: string;
+  src: string;
+  alt: string;
   span: string;
 }[] = [
-  { label: "Linden / forearm", category: "Fine Line", art: "ink-rings", span: "sm:col-span-4 sm:row-span-2" },
-  { label: "Obsidian / back", category: "Blackwork", art: "ink-blades", span: "sm:col-span-2 sm:row-span-3" },
-  { label: "Portrait study", category: "Realism", art: "ink-panel", span: "sm:col-span-3 sm:row-span-2" },
-  { label: "Hairline script", category: "Minimal", art: "ink-grid", span: "sm:col-span-3" },
-  { label: "Curated lobe", category: "Piercing", art: "ink-rings", span: "sm:col-span-3" },
-  { label: "Ornamental band", category: "Blackwork", art: "ink-grid", span: "sm:col-span-4 sm:row-span-2" },
-  { label: "Botanic line", category: "Fine Line", art: "ink-panel", span: "sm:col-span-2 sm:row-span-2" },
-  { label: "Grey wash animal", category: "Realism", art: "ink-blades", span: "sm:col-span-3 sm:row-span-2" },
-  { label: "Septum / titanium", category: "Piercing", art: "ink-grid", span: "sm:col-span-3" },
-  { label: "Single dot series", category: "Minimal", art: "ink-rings", span: "sm:col-span-3" },
+  {
+    label: "Linden / forearm",
+    category: "Fine Line",
+    src: fineLine,
+    alt: "Fine line floral tattoo on a forearm",
+    span: "sm:col-span-4 sm:row-span-2",
+  },
+  {
+    label: "Obsidian / back",
+    category: "Blackwork",
+    src: blackwork,
+    alt: "Ornamental blackwork tattoo covering a back",
+    span: "sm:col-span-2 sm:row-span-3",
+  },
+  {
+    label: "Portrait study",
+    category: "Realism",
+    src: realism,
+    alt: "Black and grey realism lion tattoo on an arm",
+    span: "sm:col-span-3 sm:row-span-2",
+  },
+  {
+    label: "Hairline script",
+    category: "Minimal",
+    src: minimal,
+    alt: "Minimal dot and line tattoo on a wrist",
+    span: "sm:col-span-3",
+  },
+  {
+    label: "Curated lobe",
+    category: "Piercing",
+    src: piercing,
+    alt: "Curated ear piercing stack with titanium jewellery",
+    span: "sm:col-span-3",
+  },
+  {
+    label: "Ornamental band",
+    category: "Geometric",
+    src: geometric,
+    alt: "Geometric mandala tattoo on a forearm",
+    span: "sm:col-span-4 sm:row-span-2",
+  },
+  {
+    label: "Botanic line",
+    category: "Fine Line",
+    src: fineLine,
+    alt: "Delicate botanical fine line tattoo",
+    span: "sm:col-span-2 sm:row-span-2",
+  },
+  {
+    label: "Grey wash animal",
+    category: "Realism",
+    src: realism,
+    alt: "Grey wash animal tattoo study",
+    span: "sm:col-span-3 sm:row-span-2",
+  },
+  {
+    label: "Septum / titanium",
+    category: "Piercing",
+    src: piercing,
+    alt: "Titanium septum piercing close up",
+    span: "sm:col-span-3",
+  },
+  {
+    label: "Single dot series",
+    category: "Minimal",
+    src: minimal,
+    alt: "Series of small minimal dot tattoos",
+    span: "sm:col-span-3",
+  },
 ];
+
 
 export const testimonials = [
   {
