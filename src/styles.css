@@ -74,6 +74,12 @@
     outline-offset: 3px;
   }
 
+  select,
+  option {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
   ::selection {
     background: var(--accent);
     color: var(--accent-foreground);
