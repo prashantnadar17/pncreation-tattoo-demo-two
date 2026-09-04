@@ -62,7 +62,7 @@ function Home() {
                   className="h-full w-full object-cover grayscale"
                 />
               </motion.div>
-              <div className="ink-blades absolute top-0 right-0 h-full w-1/3 border-l border-line bg-background/20" />
+              
               <p className="absolute bottom-3 left-4 text-[0.6875rem] tracking-[0.28em] uppercase text-inverse-foreground mix-blend-difference">
                 Ink · Line · Skin
               </p>
