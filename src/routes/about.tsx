@@ -120,6 +120,68 @@ function About() {
         </div>
       </section>
 
+      <section aria-labelledby="artists" className="border-b border-line">
+        <div className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:py-24">
+          <p className="eyebrow">The Artists</p>
+          <h2 id="artists" className="display mt-5 text-[12vw] leading-[0.85] sm:text-[6vw]">
+            Hands Behind
+            <br />
+            The <span className="text-accent">Needle.</span>
+          </h2>
+          <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {artists.map((a, i) => (
+              <Reveal as="li" key={a.name} delay={i * 0.06} className="group">
+                <figure className="overflow-hidden border border-line">
+                  <img
+                    src={a.src}
+                    alt={a.alt}
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                </figure>
+                <p className="eyebrow mt-5">{a.role}</p>
+                <h3 className="display mt-2 text-3xl">{a.name}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.bio}</p>
+              </Reveal>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="certificates" className="border-b border-line">
+        <div className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:py-24">
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">Certificates</p>
+              <h2 id="certificates" className="display mt-5 text-4xl sm:text-6xl">
+                Trained. Licensed. Current.
+              </h2>
+              <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
+                Hygiene and craft credentials are renewed on schedule and displayed in the studio.
+                Ask to see any of them during your consultation.
+              </p>
+            </div>
+            <ul className="border-t border-line lg:col-span-8">
+              {certificates.map((c, i) => (
+                <Reveal
+                  as="li"
+                  key={c.title}
+                  delay={i * 0.04}
+                  className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-1 border-b border-line py-5"
+                >
+                  <h3 className="text-base font-medium sm:text-lg">{c.title}</h3>
+                  <p className="text-sm text-muted-foreground">{c.issuer}</p>
+                  <p className="eyebrow w-full sm:w-auto">{c.year}</p>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
       <section className="bg-inverse text-inverse-foreground">
         <div className="mx-auto max-w-[1600px] px-5 py-20 sm:px-8">
           <h2 className="display text-[12vw] leading-[0.85] sm:text-[7vw]">
