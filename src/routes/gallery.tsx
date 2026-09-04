@@ -83,8 +83,8 @@ function Gallery() {
                   key={`${w.label}-${w.category}`}
                   layout
                   initial={safe ? { opacity: 0, y: 16 } : false}
-                  animate={safe ? { opacity: 1, y: 0 } : undefined}
-                  exit={safe ? { opacity: 0, y: -10 } : undefined}
+                  animate={safe ? { opacity: 1, y: 0 } : {}}
+                  exit={safe ? { opacity: 0, y: -10 } : {}}
                   transition={{ duration: 0.4, delay: i * 0.03 }}
                   className="group relative overflow-hidden border border-line"
                 >

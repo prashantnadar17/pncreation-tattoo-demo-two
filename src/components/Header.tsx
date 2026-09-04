@@ -93,8 +93,8 @@ export function Header() {
           <motion.div
             id="mobile-nav"
             initial={safe ? { height: 0, opacity: 0 } : false}
-            animate={safe ? { height: "auto", opacity: 1 } : undefined}
-            exit={safe ? { height: 0, opacity: 0 } : undefined}
+            animate={safe ? { height: "auto", opacity: 1 } : {}}
+            exit={safe ? { height: 0, opacity: 0 } : {}}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="overflow-hidden border-t border-line lg:hidden"
           >

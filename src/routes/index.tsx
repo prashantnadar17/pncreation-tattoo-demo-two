@@ -52,7 +52,7 @@ function Home() {
               <motion.div
                 className="absolute inset-0"
                 initial={safe ? { scaleX: 0 } : false}
-                animate={safe ? { scaleX: 1 } : undefined}
+                animate={safe ? { scaleX: 1 } : {}}
                 style={{ transformOrigin: "left" }}
                 transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
               >
@@ -88,7 +88,7 @@ function Home() {
               Scroll to explore
               <motion.span
                 aria-hidden="true"
-                animate={safe ? { y: [0, 6, 0] } : undefined}
+                animate={safe ? { y: [0, 6, 0] } : {}}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
                 ↓
