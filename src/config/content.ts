@@ -4,6 +4,13 @@ import realism from "../assets/work-realism.jpg";
 import minimal from "../assets/work-minimal.jpg";
 import piercing from "../assets/work-piercing.jpg";
 import geometric from "../assets/work-geometric.jpg";
+import botanic from "../assets/work-botanic.jpg";
+import wolf from "../assets/work-wolf.jpg";
+import septum from "../assets/work-septum.jpg";
+import dots from "../assets/work-dots.jpg";
+import artist1 from "../assets/artist-1.jpg";
+import artist2 from "../assets/artist-2.jpg";
+import artist3 from "../assets/artist-3.jpg";
 
 export const services = [
   {
@@ -189,32 +196,89 @@ export const works: {
   {
     label: "Botanic line",
     category: "Fine Line",
-    src: fineLine,
-    alt: "Delicate botanical fine line tattoo",
+    src: botanic,
+    alt: "Delicate fern fine line tattoo on an inner forearm",
     span: "sm:col-span-2 sm:row-span-2",
   },
   {
     label: "Grey wash animal",
     category: "Realism",
-    src: realism,
-    alt: "Grey wash animal tattoo study",
+    src: wolf,
+    alt: "Black and grey realism wolf tattoo on an upper arm",
     span: "sm:col-span-3 sm:row-span-2",
   },
   {
     label: "Septum / titanium",
     category: "Piercing",
-    src: piercing,
-    alt: "Titanium septum piercing close up",
+    src: septum,
+    alt: "Titanium septum ring piercing close up",
     span: "sm:col-span-3",
   },
   {
     label: "Single dot series",
     category: "Minimal",
-    src: minimal,
-    alt: "Series of small minimal dot tattoos",
+    src: dots,
+    alt: "Series of small minimal dot tattoos along a wrist",
     span: "sm:col-span-3",
   },
 ];
+
+export const artists = [
+  {
+    name: "Mira Kapoor",
+    role: "Founder · Fine Line & Minimal",
+    bio: "Twelve years behind the machine. Mira draws every piece by hand before it touches skin and specialises in work that ages quietly.",
+    src: artist1,
+    alt: "Portrait of tattoo artist Mira Kapoor holding a rotary machine",
+  },
+  {
+    name: "Arjun Rao",
+    role: "Blackwork & Realism",
+    bio: "A background in illustration shows in every sleeve. Arjun builds heavy contrast pieces designed to hold for decades.",
+    src: artist2,
+    alt: "Portrait of tattoo artist Arjun Rao sketching a design at his desk",
+  },
+  {
+    name: "Kabir Shah",
+    role: "Resident Piercer",
+    bio: "APP-aligned piercing practice with implant-grade jewellery only. Kabir maps every placement to anatomy before marking.",
+    src: artist3,
+    alt: "Portrait of piercer Kabir Shah holding sterile forceps and jewellery",
+  },
+] as const;
+
+export const certificates = [
+  {
+    title: "Bloodborne Pathogens Certified",
+    issuer: "Body Art Training Alliance",
+    year: "Renewed annually",
+  },
+  {
+    title: "Sterilization & Autoclave Operation",
+    issuer: "International Sterile Practice Board",
+    year: "Certified 2021",
+  },
+  {
+    title: "First Aid & CPR",
+    issuer: "Red Cross Society",
+    year: "Renewed annually",
+  },
+  {
+    title: "Professional Body Piercing",
+    issuer: "Association of Professional Piercers — aligned training",
+    year: "Certified 2019",
+  },
+  {
+    title: "Advanced Black & Grey Realism",
+    issuer: "International Tattoo Convention Masterclass",
+    year: "Completed 2022",
+  },
+  {
+    title: "Municipal Health Licence",
+    issuer: "Local health authority — studio licence",
+    year: "Current & displayed in studio",
+  },
+] as const;
 
 
 export const testimonials = [
