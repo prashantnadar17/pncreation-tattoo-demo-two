@@ -50,13 +50,19 @@ function Home() {
 
             <div className="relative mt-8 h-40 overflow-hidden border border-line sm:h-56 lg:h-64">
               <motion.div
-                className="ink-panel absolute inset-0"
+                className="absolute inset-0"
                 initial={safe ? { scaleX: 0 } : false}
                 animate={safe ? { scaleX: 1 } : undefined}
                 style={{ transformOrigin: "left" }}
                 transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-              />
-              <div className="ink-blades absolute top-0 right-0 h-full w-1/3 border-l border-line" />
+              >
+                <img
+                  src={heroInk}
+                  alt="Black and grey tattoo work in progress at Noir Ink Studio"
+                  className="h-full w-full object-cover grayscale"
+                />
+              </motion.div>
+              <div className="ink-blades absolute top-0 right-0 h-full w-1/3 border-l border-line bg-background/20" />
               <p className="absolute bottom-3 left-4 text-[0.6875rem] tracking-[0.28em] uppercase text-inverse-foreground mix-blend-difference">
                 Ink · Line · Skin
               </p>
