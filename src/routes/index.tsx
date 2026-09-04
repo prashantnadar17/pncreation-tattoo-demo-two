@@ -2,8 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Reveal, TextReveal, PageTransition, useMotionSafe } from "../components/motion";
 import { ContactActions } from "../components/ContactActions";
+import { RoutePending } from "../components/Spinner";
 import { homeServices, principles, process, testimonials, works } from "../config/content";
 import { breadcrumbSchema, site } from "../config/site";
+import heroInk from "../assets/hero-ink.jpg";
 
 const title = `${site.legalName} — Custom Tattoo & Piercing Studio in ${site.city}`;
 const description = `Custom tattoos, fine line, blackwork, realism and professional piercing in ${site.city}. Designed around you at ${site.legalName}.`;
@@ -26,6 +28,7 @@ export const Route = createFileRoute("/")({
     ],
   }),
   component: Home,
+  pendingComponent: RoutePending,
 });
 
 function Home() {
@@ -232,9 +235,13 @@ function Home() {
                 delay={i * 0.05}
                 className={`${w.span} row-span-2 border border-line`}
               >
-                {/* Replace this block with an <img> later — same wrapper, same aspect. */}
                 <figure className="relative h-full w-full overflow-hidden">
-                  <div className={`${w.art} h-full w-full`} aria-hidden="true" />
+                  <img
+                    src={w.src}
+                    alt={w.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover grayscale transition-all duration-500 hover:scale-[1.03] hover:grayscale-0"
+                  />
                   <figcaption className="absolute bottom-2 left-3 text-[0.62rem] tracking-[0.24em] uppercase text-inverse-foreground mix-blend-difference">
                     {w.label}
                   </figcaption>
