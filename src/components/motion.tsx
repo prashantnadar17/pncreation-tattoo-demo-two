@@ -24,7 +24,7 @@ export function Reveal({
     <Tag
       className={className}
       initial={safe ? { opacity: 0, y } : false}
-      whileInView={safe ? { opacity: 1, y: 0 } : undefined}
+      whileInView={safe ? { opacity: 1, y: 0 } : {}}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
     >
@@ -56,7 +56,7 @@ export function TextReveal({
       className={className}
       variants={lineVariants}
       initial={safe ? "hidden" : false}
-      whileInView={safe ? "show" : undefined}
+      whileInView={safe ? "show" : "hidden"}
       viewport={{ once: true }}
     >
       {lines.map((line) => (
@@ -74,7 +74,7 @@ export function PageTransition({ children }: { children: ReactNode }) {
     <motion.main
       id="main"
       initial={safe ? { opacity: 0 } : false}
-      animate={safe ? { opacity: 1 } : undefined}
+      animate={safe ? { opacity: 1 } : {}}
       transition={{ duration: 0.4 }}
     >
       {children}
