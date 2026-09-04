@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Reveal, PageTransition } from "../components/motion";
 import { RoutePending } from "../components/Spinner";
 import { ContactActions } from "../components/ContactActions";
-import { principles, process } from "../config/content";
+import { artists, certificates, principles, process } from "../config/content";
 import { breadcrumbSchema, site } from "../config/site";
 import studioImg from "../assets/studio.jpg";
 import inkImg from "../assets/hero-ink.jpg";
